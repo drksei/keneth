@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon, NotebookIcon } from "lucide-react";
+import { HomeIcon, Icon, NotebookIcon } from "lucide-react";
 import { ReactLight } from "@/components/ui/svgs/reactLight";
 import { NextjsIconDark } from "@/components/ui/svgs/nextjsIconDark";
 import { Typescript } from "@/components/ui/svgs/typescript";
@@ -12,6 +12,10 @@ import { Kubernetes } from "@/components/ui/svgs/kubernetes";
 import { Java } from "@/components/ui/svgs/java";
 import { Csharp } from "@/components/ui/svgs/csharp";
 import { Godot } from "@/components/ui/svgs/godot";
+import { Git } from "@/components/ui/svgs/git";
+import { Bash } from "@/components/ui/svgs/bash";
+import { Html } from "@/components/ui/svgs/html";
+import { Linux } from "@/components/ui/svgs/linux";
 
 export const DATA = {
   name: "Keneth Rapalo",
@@ -34,6 +38,10 @@ export const DATA = {
     { name: "Docker", icon: Docker },
     { name: "Java", icon: Java },
     { name: "Godot Engine ", icon: Godot },
+    { name: "Git ", icon: Git },
+    { name: "$Bash", icon: Bash },
+    { name: "Html", icon: Html},
+    { name: "Linux", icon: Linux},
 
   ],
   navbar: [
@@ -122,7 +130,7 @@ export const DATA = {
       badges: [],
       location: "San Pedro Sula, HN",
       title: "IT Helpdesk & software operator",
-      logoUrl: "/nvidia.png",
+      logoUrl: "/INM.jpg",
       start: "Ago 2017",
       end: "Sep 2019",
       description:
