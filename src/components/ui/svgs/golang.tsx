@@ -1,5 +1,4 @@
 import type { SVGProps } from "react";
-
 const Golang = (props: SVGProps<SVGSVGElement>) => (
   <svg {...props} viewBox="0 0 207 78">
     <g fill="currentColor" fillRule="evenodd">

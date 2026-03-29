@@ -233,4 +233,17 @@
     @apply border-b-0;
   }
 
+@font-face {
+  font-family: 'Nothing';
+  src: url('/fonts/nothing.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Clase personalizada */
+.font-nothing {
+  font-family: 'Nothing', sans-serif;
+}
+
 }
