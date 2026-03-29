@@ -75,6 +75,7 @@ export const DATA = {
       Telegram: {
         name: "Instagram",
         url: "https://t.me/drksei",
+        icon: Icons.instagram,
         navbar: false,
       },
       Gallery: {
