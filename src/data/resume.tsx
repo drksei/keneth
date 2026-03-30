@@ -189,7 +189,7 @@ export const DATA = {
         },
         {
           type: "Repository",
-          href: "https://github.com/magicuidesign/magicui",
+          href: "https://gitlab.com/keneth.rapalo/plinga_studios",
           icon: <Icons.gitlab className="size-3" />,
         },
       ],
@@ -223,6 +223,33 @@ export const DATA = {
         },
       ],
       image: "/terminal.site.png",
+      video: "/terminal.mp4",
+    },
+
+    {
+      title: "Rock",
+      href: "https://gitlab.com/keneth.rapalo/rock",
+      dates: "Simple web terminal portfolio",
+      active: true,
+      description:
+        "Interactive Android +10.0 application based on the game “rock, paper or scissors” with Deepseek database and API.",
+      technologies: [
+        "Scratch3",
+        "TinyDB",
+        "Deepseek API",
+      ],
+      links: [
+        {
+          type: "Repository",
+          href: "https://gitlab.com/keneth.rapalo/rock",
+          icon: <Icons.gitlab className="size-3" />,
+        },
+        {
+          type: "Android",
+          href: "",
+        },
+      ],
+      image: "/rock.png",
       video: "",
     },
   ],
