@@ -27,7 +27,7 @@ export const DATA = {
     "$Maintenance and support technician - Computer systems & networks.",
   summary:
     "I work on end-to-end computer systems — assembling, configuring, and maintaining computers. Passionate about technology with a solid understanding of hardware and software environments. Proactive individual, eager to learn and grow professionally every day. Outside of my profession, I really enjoy about 2D character design check it out at my [VSCO ↗](https://vsco.co/drkv2/gallery/)",
-  avatarUrl: "/me.png",
+  avatarUrl: "/me.jpg",
   skills: [
     { name: "React", icon: ReactLight },
     { name: "Next.js", icon: NextjsIconDark },
