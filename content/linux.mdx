@@ -1,0 +1,124 @@
+---
+title: "Linux Basics: Essential Commands"
+publishedAt: "2026-04-14"
+updatedAt: "2026-04-14"
+author: "Keneth Rapalo"
+summary: "Master Linux with essential commands, practical patterns, and tips for navigating the terminal like a pro."
+image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=192&fit=crop"
+---
+
+# Linux Basics: Essential Commands for Beginners
+
+Linux shines when you master the command line — not when you struggle with syntax or permissions. A few small habits can make your terminal interactions faster, safer, and easier to debug.
+
+## Practical rules of thumb
+
+- Use `man` or `--help` to understand how any command works.
+- Prefer `Tab` autocompletion to avoid typos and save time.
+- Use `Ctrl + C` to stop a runaway command, `Ctrl + Z` to pause it.
+- Avoid `rm -rf` unless you're absolutely sure (it's unforgiving).
+- Use `sudo` only when necessary — with great power comes great responsibility.
+
+## Essential Linux commands for beginners
+
+### Navigation and file system
+
+```bash
+# Show current directory path
+pwd
+
+# List files and directories
+ls
+ls -l          # detailed list with permissions, size, date
+ls -a          # show hidden files (those starting with .)
+ls -la         # detailed list including hidden files
+
+# Change directory
+cd /home/user
+cd ..          # go up one level
+cd ~           # go to home directory
+cd -           # go to previous directory
+
+# Print file content to terminal
+cat filename.txt
+less filename.txt   # view large files page by page (press q to exit)
+head filename.txt   # show first 10 lines
+tail filename.txt   # show last 10 lines
+tail -f log.txt     # follow live updates to a log file
+```
+
+### Package management (installing software)
+```bash
+# Debian/Ubuntu (apt)
+sudo apt update               # update package list
+sudo apt upgrade              # upgrade all packages
+sudo apt install firefox      # install a package
+sudo apt remove firefox       # remove a package
+sudo apt autoremove           # remove unused dependencies
+
+# Red Hat/Fedora (dnf/yum)
+sudo dnf install firefox      # install a package
+sudo dnf update               # update all packages
+sudo dnf remove firefox       # remove a package
+sudo dnf search nginx         # search for a package
+
+# Arch Linux (pacman)
+sudo pacman -S firefox        # install a package
+sudo pacman -Syu              # update entire system
+sudo pacman -R firefox        # remove a package
+sudo pacman -Ss nginx         # search for a package
+
+# Snap (universal packages)
+snap install vscode --classic
+snap remove vscode
+snap list                     # show installed snaps
+
+# Flatpak
+flatpak install flathub org.mozilla.firefox
+flatpak run org.mozilla.firefox
+flatpak list                  # show installed flatpaks
+```
+
+### File permissions and ownership
+```bash
+# View permissions
+ls -l filename
+
+# Change permissions (symbolic method)
+chmod u+x script.sh           # add execute for user
+chmod g-w file.txt            # remove write for group
+chmod o+r file.txt            # add read for others
+chmod a+x script.sh           # add execute for all (user+group+others)
+
+# Change permissions (numeric method)
+chmod 755 script.sh           # rwxr-xr-x
+chmod 644 file.txt            # rw-r--r--
+chmod 600 secret.txt          # rw-------
+chmod 700 private_folder/     # rwx------
+
+# Change ownership
+chown username file.txt
+chown username:groupname file.txt
+chown -R username:groupname folder/   # recursive
+
+# Special permissions
+chmod +t folder/              # sticky bit (only owner can delete)
+chmod g+s folder/             # setgid (new files inherit group)
+chmod u+s executable          # setuid (run as owner)
+```
+
+### Finding files and text
+```bash
+# Find files by name
+find /home -name "*.txt"      # find all .txt files in /home
+find . -type d -name "docs"   # find directories named "docs"
+find /var -size +100M         # find files larger than 100MB
+find . -mtime -7              # files modified in last 7 days
+
+# Search inside files with grep
+grep "error" log.txt
+grep -r "TODO" src/           # recursive search
+grep -i "warning" log.txt     # case-insensitive
+grep -n "function" code.py    # show line numbers
+grep -v "debug" log.txt       # exclude lines with "debug"
+

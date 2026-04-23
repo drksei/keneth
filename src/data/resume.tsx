@@ -24,7 +24,7 @@ export const DATA = {
   location: "Barcelona, SP",
   locationLink: "https://www.google.com/maps/place/sanfrancisco",
   description:
-    "$Maintenance and support technician - Computer systems & networks.",
+    "$Maintenance and support technician - Computer Systems & Networks.",
   summary:
     "I work on end-to-end computer systems — assembling, configuring, and maintaining computers. Passionate about technology with a solid understanding of hardware and software environments. Proactive individual, eager to learn and grow professionally every day. Outside of my profession, I really enjoy about 2D character design check it out at my [VSCO ↗](https://vsco.co/drkv2/gallery/)",
   avatarUrl: "/me.jpg",
@@ -40,13 +40,13 @@ export const DATA = {
     { name: "Godot Engine ", icon: Godot },
     { name: "Git ", icon: Git },
     { name: "$Bash", icon: Bash },
-    { name: "Html", icon: Html},
+    { name: "HTML", icon: Html},
     { name: "Linux", icon: Linux},
 
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-   /* { href: "/blog", icon: NotebookIcon, label: "Blog" }, */
+    { href: "/blog", icon: NotebookIcon, label: "Blog" }, 
   ],
   contact: {
     email: "hello@example.com",

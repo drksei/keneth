@@ -1,0 +1,184 @@
+---
+title: "GIT for Beginners"
+publishedAt: "2026-02-14"
+updatedAt: "2026-04-14"
+author: "Keneth Rapalo"
+summary: "From first commit to collaboration—learn how to build confidence in your projects with essential Git commands and workflows."
+image: "https://images.unsplash.com/photo-1556075798-4825dfa3a0b6?w=800&h=192&fit=crop"
+---
+
+# Git for Beginners: A Practical Guide
+
+Git is your safety net — it lets you track changes, experiment freely, and collaborate without fear. The goal is not memorizing every command; it's <mark>mastering the essential workflows that save you time</mark>.
+
+If you find yourself stuck or overwhelmed, it usually means you're trying to do too much at once. In practice, you can ignore advanced features and focus on a few high-signal habits.
+
+## Essential commands (a simple rule)
+
+- **`git status`**: check what's changed or staged.
+- **`git add`**: stage changes for commit.
+- **`git commit -m`**: save a snapshot with a clear message.
+- **`git push`**: upload commits to a remote repository.
+- **`git pull`**: download and merge changes from a remote.
+- **`git branch`**: list, create, or delete branches.
+- **`git checkout`** / **`git switch`**: move between branches.
+- **`git merge`**: combine changes from different branches.
+- **`git log`**: view commit history.
+- **`git clone`**: copy an existing repository.
+
+## Things to avoid
+
+- ~~Committing directly to `main` or `master`~~ without a pull request.
+- ~~Writing vague commit messages~~ like "fixed stuff" or "update".
+- ~~Ignoring merge conflicts~~ and hoping they resolve themselves.
+- ~~Using `git push --force`~~ unless you absolutely know what you're doing.
+- ~~Committing sensitive data~~ (API keys, passwords, `.env` files).
+
+## Setup & configuration
+
+```bash
+# Configure user info
+git config --global user.name "Your Name"
+git config --global user.email "your@email.com"
+
+# Check settings
+git config --list
+```
+## Starting a repository
+```bash
+# Initialize new repo
+git init
+
+# Clone existing repo
+git clone <repository-url>
+
+# Clone specific branch
+git clone -b <branch-name> <repository-url>
+```
+## Basic Workflow
+```bash
+# Check status
+git status
+
+# Add files to staging
+git add <file>          # Specific file
+git add .               # All files
+git add *.js            # All JS files
+
+# Commit changes
+git commit -m "Message"
+git commit -am "Message"  # Add & commit in one step
+
+# Remove files
+git rm <file>
+git rm --cached <file>  # Remove from tracking only
+```
+## Branching
+```bash
+# List branches
+git branch              # Local branches
+git branch -r           # Remote branches
+git branch -a           # All branches
+
+# Create branch
+git branch <branch-name>
+git checkout -b <branch-name>  # Create & switch
+
+# Switch branches
+git checkout <branch-name>
+git switch <branch-name>
+
+# Delete branch
+git branch -d <branch-name>
+git branch -D <branch-name>     # Force delete
+
+# Rename branch
+git branch -m <old-name> <new-name>
+```
+## Merging & Rebasing
+```bash
+# Merge branch into current
+git merge <branch-name>
+
+# Abort merge on conflict
+git merge --abort
+
+# Rebase branch
+git rebase <branch-name>
+git rebase --continue
+git rebase --abort
+```
+## Remote Repositories
+```bash
+# View remotes
+git remote -v
+
+# Add remote
+git remote add origin <url>
+
+# Push to remote
+git push origin <branch-name>
+git push -u origin <branch-name>  # Set upstream
+
+# Pull from remote
+git pull origin <branch-name>
+git pull --rebase origin <branch-name>
+
+# Fetch without merging
+git fetch origin
+git fetch --all
+
+# Delete remote branch
+git push origin --delete <branch-name>
+```
+## History & Logs
+```bash
+# View commit history
+git log
+git log --oneline          # Compact view
+git log --graph            # With graph
+git log -n 5               # Last 5 commits
+
+# View changes
+git diff                   # Unstaged changes
+git diff --staged          # Staged changes
+git diff <commit1> <commit2>
+
+# Show commit details
+git show <commit-hash>
+git show HEAD              # Latest commit
+git show HEAD~1            # Previous commit
+```
+## Undoing Changes
+```bash
+# Unstage files (keep changes)
+git reset HEAD <file>
+git restore --staged <file>
+
+# Discard changes (dangerous)
+git checkout -- <file>
+git restore <file>
+
+# Revert commit (safe)
+git revert <commit-hash>
+
+# Reset commits (destructive)
+git reset --soft HEAD~1    # Keep changes
+git reset --mixed HEAD~1   # Unstage changes
+git reset --hard HEAD~1    # Delete changes
+```
+## Advanced/Useful Commands
+```bash
+# Clean untracked files
+git clean -n              # Preview
+git clean -f              # Force delete
+
+# Cherry-pick commits
+git cherry-pick <commit-hash>
+
+# Archive repository
+git archive --format=zip HEAD > archive.zip
+
+# Submodules
+git submodule add <repo-url>
+git submodule update --init

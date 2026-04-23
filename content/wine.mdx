@@ -1,0 +1,55 @@
+---
+title: "Windows Games in Linux: How it works?"
+publishedAt: "2024-12-10"
+updatedAt: "2024-12-10"
+author: "Keneth Rapalo"
+summary: "Master WINE and learn how Windows games run on Linux with compatibility layers, performance insights, and troubleshooting knowledge."
+image: "https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=800&h=192&fit=crop"
+---
+
+# The Core Idea: Translation, Not Emulation 
+
+Windows games speak a language called DirectX (or sometimes Vulkan). Your Linux computer speaks Vulkan (and other native graphics languages). They don't understand each other directly.
+
+So, you use a translation layer – a piece of software that sits between the game and Linux, instantly translating each command from "Windows-speak" into "Linux-speak."
+
+This is incredibly fast because the game still runs directly on your CPU and GPU (not simulated in software). There's a tiny performance cost (usually 5-15%), but many games actually run faster on Linux than Windows.
+
+## The Main Tool: Wine (Wine Is Not an Emulator)
+
+Wine is the foundation. It translates Windows system calls (file access, registry, graphics, sound) into Linux system calls.
+
+What it does: Lets you run a `.exe` file directly on Linux, no Windows license needed.
+
+The catch: Wine alone is complex. You often need to configure specific settings, libraries, and fixes for each game.
+
+### The User-Friendly Solution: Proton (from Valve)
+
+- How to use it: In Steam on Linux, go to Settings > Steam Play > Enable Proton for all titles.
+
+- What happens: You click "Install" on a Windows-only game. Steam downloads the game plus a compatible version of Proton. You click "Play." It just works.
+
+- The magic: Proton includes extra patches, DXVK (translates DirectX 9/10/11 to Vulkan), VKD3D (translates DirectX 12 to Vulkan), and full controller support.
+
+**Why this matters:** WINE runs Windows executables  as native Linux processes. There's no Windows OS running underneath — just a translation layer.
+
+## What You Need on Your Linux PC
+
+**1. Graphics drivers**
+– Must be up-to-date. For NVIDIA, use the proprietary driver. For AMD/Intel, the open-source driver is excellent.
+
+**2. Steam**
+– For the easiest experience (Proton).
+
+**3. Lutris**
+– A game manager for games outside Steam (Epic, GOG, Battle.net, Ubisoft, standalone installers). Lutris automates Wine setups for each game.
+
+**4. Heroic Games Launcher**
+– Specifically for Epic Games and GOG titles, with built-in Proton/Wine support.
+
+## Can you run every Windows game?
+No. But roughly 80-85% of the Windows game library runs well today, including many top-tier AAA titles. The main holdouts are competitive shooters with kernel-level anti-cheat.
+
+**Important note on anti-cheat:** Games like Apex Legends, The Finals, and Elder Scrolls Online work because developers enabled Proton support. Fortnite, Destiny 2, Rainbow Six Siege do not work due to their anti-cheat's kernel requirements.
+
+
