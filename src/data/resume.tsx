@@ -10,7 +10,7 @@ import { Postgresql } from "@/components/ui/svgs/postgresql";
 import { Docker } from "@/components/ui/svgs/docker";
 import { Kubernetes } from "@/components/ui/svgs/kubernetes";
 import { Java } from "@/components/ui/svgs/java";
-import { Csharp } from "@/components/ui/svgs/csharp";
+//import { Csharp } from "@/components/ui/svgs/csharp";
 import { Godot } from "@/components/ui/svgs/godot";
 import { Git } from "@/components/ui/svgs/git";
 import { Bash } from "@/components/ui/svgs/bash";
