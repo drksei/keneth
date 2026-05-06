@@ -46,7 +46,7 @@ export const DATA = {
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "/blog", icon: NotebookIcon, label: "Blog" }, 
+    //{ href: "/blog", icon: NotebookIcon, label: "Blog" }, 
   ],
   contact: {
     email: "hello@example.com",
@@ -103,6 +103,18 @@ export const DATA = {
   },
 
   work: [
+        {
+      company: "Fervimax Group",
+      href: "https://atomic.finance",
+      badges: [],
+      location: "Presential",
+      title: "Hardware Technician",
+      logoUrl: "/Fervimax.png",
+      start: "Currently working",
+      end: "",
+      description:
+        "Installation, repair and migration of systems.",
+    },
     {
       company: "App Informática Nou Barris",
       href: "https://atomic.finance",
