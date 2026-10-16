@@ -18,15 +18,15 @@ import { Html } from "@/components/ui/svgs/html";
 import { Linux } from "@/components/ui/svgs/linux";
 
 export const DATA = {
-  name: "Keneth Rapalo",
+  name: "Keneth Rápalo",
   initials: "KR",
   url: "https://keneth-rapalo.es",
   location: "Barcelona, SP",
   locationLink: "https://www.google.com/maps/place/sanfrancisco",
   description:
-    "$Maintenance and support technician - Computer Systems & Networks.",
+    "$Hardware, Systems & Network Support Specialist.",
   summary:
-    "I work on end-to-end computer systems — assembling, configuring, and maintaining computers. Passionate about technology with a solid understanding of hardware and software environments. Proactive individual, eager to learn and grow professionally every day. Outside of my profession, I really enjoy about 2D character design check it out at my [VSCO ↗](https://vsco.co/drkv2/gallery/)",
+    "Versatile IT Systems Technician skilled in hardware assembly, OS deployment, and system maintenance. Committed to building high-performance hardware solutions and maintaining robust computing environments. Outside of my profession, I really enjoy about 2D character design check it out at my [VSCO ↗](https://vsco.co/drkv2/gallery/)",
   avatarUrl: "/me.jpg",
   skills: [
     { name: "React", icon: ReactLight },
@@ -40,8 +40,8 @@ export const DATA = {
     { name: "Godot Engine ", icon: Godot },
     { name: "Git ", icon: Git },
     { name: "$Bash", icon: Bash },
-    { name: "HTML", icon: Html},
-    { name: "Linux", icon: Linux},
+    { name: "HTML", icon: Html },
+    { name: "Linux", icon: Linux },
 
   ],
   navbar: [
@@ -103,13 +103,13 @@ export const DATA = {
   },
 
   work: [
-        {
+    {
       company: "Fervimax Group",
       href: "https://atomic.finance",
       badges: [],
       location: "Presential",
       title: "Hardware Technician",
-      logoUrl: "/Fervimax.png",
+      logoUrl: "../Fervimax.png",
       start: "Currently working",
       end: "",
       description:
@@ -150,6 +150,14 @@ export const DATA = {
     },
   ],
   education: [
+        {
+      school: "Polytechnic University of Madrid",
+      href: "https://www.upm.es/",
+      degree: "Industrial computing.",
+      logoUrl: "https://upload.wikimedia.org/wikipedia/en/a/a4/Universidad_Polit%C3%A9cnica_de_Madrid_%28logo%29.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail_unscaled",
+      start: "Actually",
+      end: "",
+    },
     {
       school: "Institut tecnologic de Barcelona",
       href: "https://itb.cat/",

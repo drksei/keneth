@@ -24,7 +24,7 @@ export default function ContactSection() {
           Any question?
         </h2>
         <p className="mx-auto max-w-lg text-muted-foreground text-balance">
-          Want to talk? Just shoot me a dm on my{" "}
+          If you have a project in mind or want collaborate, contact me at my{" "}
           <Link
             href={DATA.contact.social.Telegram.url}
             target="_blank"
